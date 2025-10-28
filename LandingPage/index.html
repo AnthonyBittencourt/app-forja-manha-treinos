@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div>
+            <img class="wrap-img">
+        </div>
+        <img class="logo" src="./Images/logo.png" alt="logo">
+        <div class="wrap-links">
+            <a href="#s1">Home</a>
+            <a href="#s2">Cards</a>
+            <a href="#s3">Video</a>
+            <a href="#s4">Curiosidades</a>
+        </div>
+    </nav>
+    <main>
+        <section id="s1">
+            <div class="left">
+                <div class="wrap-banner">
+                    <img src="./images/banner.png" alt="Banner">
+                </div>
+            </div>
+
+            <div class = "right">
+                <h1>SMRUFS</h1>
+                <p>Descritivo: um grupo de pequenos seres azuis que vivem em casas de cogumelos, criados pelo cartunista belga Peyo</p>
+            </div>
+        </section>
+           
+        <section id="s2">
+            <h2>Cards Dos Personagens</h2>
+
+            <div class="wrap-cards">
+                <div class="card">
+
+                    <img height="250px" width="250px"  src="./images/papasmurf.jpg" alt="Papa pitufo">
+                    <h3>Papai smruf</h3>
+                    <p>O sábio e líder dos smurfs, Papai Smurf é conhecido por sua barba branca e por sua paciência. Ele guia a vila com sabedoria, usando seus conhecimentos de magia e ciência para proteger todos.</p>
+                </div>
+
+                <div class="card">
+                    <img height="250px" width="250px" src="./images/smurfette.webp" alt="Pitufina">
+                    <h3>smrufette</h3>
+                    <p>A única smurf feminina original da vila, Smurfette é gentil, curiosa e cheia de energia. Sempre disposta a ajudar os outros, ela combina beleza, coragem e um coração generoso.</p>
+                </div>
+
+                <div class="card">
+                    <img height="250px" width="250px" src="./images/ranz.jpg" alt="Pitufo">
+                    <h3>ranzinza</h3>
+                    <p>Sempre de mau humor e reclamando de tudo, é conhecido por seu bordão “Eu odeio isso!”. Apesar da atitude rabugenta, ele tem um bom coração e se preocupa com seus amigos.</p>
+                </div>
+            </div>
+
+        </section>
+        
+        <section id="s3">
+            <div class="wrap-video">
+                <iframe id="meuVideo" src="https://www.youtube.com/embed/6FPh0yhhA_M?si=3mwBGJT0ppp33svw&amp;start=24&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+        
+        <section id="s4">
+            <h2>4</h2>
+        </section>
+
+    </main>
+    <script>
+        // Carrega a API do YouTube
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        document.head.appendChild(tag);
+
+        var player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('meuVideo', {
+                events: {
+                    'onReady': onPlayerReady
+                }
+            });
+        }
+
+        function onPlayerReady(event) {
+            // Define velocidade 2x
+            event.target.setPlaybackRate(2);
+            // Remove o som e toca automaticamente (evita bloqueio do autoplay)
+            event.target.mute();
+            event.target.playVideo();
+        }
+    </script>
+</body>
+</html>
