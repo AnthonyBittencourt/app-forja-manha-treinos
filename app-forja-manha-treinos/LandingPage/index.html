@@ -72,7 +72,9 @@
         </section>
         
         <section id="s4">
-            <h2>4</h2>
+            <div class="telaS4">
+                <button>Curiosidades</button>
+            </div>
         </section>
 
     </main>
@@ -92,9 +94,9 @@
         }
 
         function onPlayerReady(event) {
-            // Define velocidade 2x
+
             event.target.setPlaybackRate(2);
-            // Remove o som e toca automaticamente (evita bloqueio do autoplay)
+            
             event.target.mute();
             event.target.playVideo();
         }

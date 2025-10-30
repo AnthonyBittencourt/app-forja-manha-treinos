@@ -270,9 +270,42 @@ nav{
 }
 
 #s4{
-    background-color: rgb(30, 30, 30);
+    background-image: url(./images/backgroundDoSmurftontao.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     min-height: 100vh;
-    padding-top: 80px;
+}
+
+.telaS4{
+    background-color: #006097;
+    width: auto;
+    height: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(3, 3, 3, 100) 0px 300px 3600px -2px inset;
+}
+
+.telaS4 button{
+    background-color: #000000;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    width: 300px;
+    height: 100px;
+    border-radius: 100px;
+    border: 3px solid white;
+    transition: all 100ms ease-in-out;
+}
+
+.telaS4 button:hover{
+    cursor: pointer;
+    background-color: #303030;
+    color: rgb(255, 253, 246);
+    width: 300px;
+    height: 100px;
+    border: 2.4px solid white;
 }
 
 #meuVideo{
